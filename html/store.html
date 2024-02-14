@@ -5,10 +5,11 @@
 </head>
 <body>
     <form id="uploadForm">
+        <!-- ChatGPT 3.5 was used to create to the regex expressions used as patterns here. -->
         <label for="word">Word</label></br>
-        <input id="word" type="text"></br>
+        <input id="word" type="text" pattern="^(?!\d+$).+" required></br>
         <label for="def">Definition</label></br>
-        <input type="text" id="def"></br>
+        <input type="text" id="def" pattern="^.+$" required></br>
         <input type="submit" id="submitWordDef">
     </form>
     <div id="feedback"></div>
